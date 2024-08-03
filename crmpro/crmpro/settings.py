@@ -74,6 +74,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'crmpro.wsgi.application'
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-fayaz409-crmwithdjango-gse9jbc0gm8.ws-us115.gitpod.io',
+]
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
@@ -115,7 +118,8 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
+# Message storage backend
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

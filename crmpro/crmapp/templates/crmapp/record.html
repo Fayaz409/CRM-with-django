@@ -1,0 +1,52 @@
+{% extends 'crmapp/base.html' %}
+
+{% block content %}
+<div class="col-md-6 offset-md-3">
+    <h1>Customer Record</h1>
+    <table class="table table-bordered">
+        <tr>
+            <th>First Name</th>
+            <td>{{ customer_record.first_name }}</td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td>{{ customer_record.last_name }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ customer_record.email }}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{ customer_record.address }}</td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>{{ customer_record.city }}</td>
+        </tr>
+        <tr>
+            <th>State</th>
+            <td>{{ customer_record.state }}</td>
+        </tr>
+        <tr>
+            <th>Zipcode</th>
+            <td>{{ customer_record.zipcode }}</td>
+        </tr>
+        <tr>
+            <th>Created At</th>
+            <td>{{ customer_record.created_at }}</td>
+        </tr>
+    </table>
+    <button type="button" class="btn btn-dark"> 
+        <a href="{% url 'home' %}" style="color: inherit; text-decoration: none;"> Back </a>
+    </button>
+    <button type="button" class="btn btn-danger"> 
+        <a href="{% url 'delete_record' customer_record.id %}" style="color: inherit; text-decoration: none;">Delete</a>
+    </button>
+    <button type="button" class="btn btn-primary"> 
+        <a href="{% url 'update_record' customer_record.id %}" style="color: inherit; text-decoration: none;">Update</a>
+    </button>
+</div>
+{% endblock %}
+
+

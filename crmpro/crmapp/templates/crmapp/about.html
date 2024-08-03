@@ -1,0 +1,65 @@
+{%extends 'crmapp/base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Best LLM Integrating Company</title>
+    
+</head>
+<body>
+{%block content%}
+{% if user.is_authenticated%}
+<div class="container mt-5">
+    <div class="col-md-8 offset-md-2">
+        <h1 class="text-center">About Us</h1><br>
+
+        <div class="text-center">
+            <h2 class="mb-4">We Are the Best LLM Integrating Company</h2>
+            <p class="lead">
+                At our company, we specialize in seamlessly integrating Large Language Models (LLMs) to meet your specific needs and provide unparalleled comfort. Our expertise ensures that your interaction with AI is not just functional but transformative, enhancing your business operations and user experience.
+            </p>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="text-center">
+            <h3>Our Mission</h3>
+            <p>
+                Our mission is to harness the power of AI and LLMs to bring your ideas to life. We work closely with you to understand your goals and tailor our solutions to fit perfectly into your workflow, ensuring that every integration is smooth, efficient, and user-friendly.
+            </p>
+        </div>
+
+        <div class="text-center mt-5">
+            <h3>Why Choose Us?</h3>
+            <p>
+                We stand out in the industry for our commitment to excellence and our customer-centric approach. Our team of experts is dedicated to delivering solutions that not only meet but exceed your expectations. Whether you're looking to automate processes, enhance customer engagement, or explore new possibilities with AI, we are here to make it happen.
+            </p>
+        </div>
+
+        <div class="text-center mt-5">
+            <h3>Our Unique Approach</h3>
+            <p>
+                What makes us unique is our ability to customize LLM integrations to fit the unique requirements of your business. We prioritize user comfort, ensuring that the technology we implement is intuitive and easy to use. From consultation to deployment, our focus is on providing a seamless and supportive experience.
+            </p>
+        </div>
+
+        <hr class="my-5">
+
+        <div class="text-center">
+            <h3>Get in Touch</h3>
+            <p>
+                Ready to take your business to the next level with the power of LLMs? <a href="contact.html">Contact us</a> today to discuss how we can help you achieve your goals.
+            </p>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="col-md-8 offset-md-2">
+    <h1>Please Sign In first</h1>
+</div>
+{% endif %}
+{%endblock%}
+
+</body>
+</html>
